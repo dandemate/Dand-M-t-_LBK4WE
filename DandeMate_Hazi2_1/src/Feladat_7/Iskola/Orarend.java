@@ -49,8 +49,13 @@ public class Orarend extends Ora{
     }
     
     public boolean oratHozzaad(Ora o){
+        boolean volt = false;
         if(this.getSzamlalo()!=12){
-            if(this.getKezdet() != o.getKezdet()){
+            for(int i=0; i<this.getSzamlalo(); i++){
+                if(this.getTomb()[i].getKezdet() == o.getKezdet())
+                    volt = true;
+            }
+            if(!volt){
                 
                 this.setKód(o.getKód());
                 this.setNév(o.getNév());

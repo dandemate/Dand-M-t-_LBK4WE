@@ -18,8 +18,12 @@ public class Main {
         String nev;
         Ora[] o = new Ora[db];
         for(int i=0; i<db; i++){
+            System.out.println("Új óra hozzáadás:");
+            System.out.print("Kód: ");
             kod = sc.nextInt();
+            System.out.print("Név: ");
             nev = sc.next();
+            System.out.print("Kezdet: ");
             kezdet = sc.nextInt();
             o[i] = new Ora(kod, nev, kezdet);
         }
@@ -27,14 +31,17 @@ public class Main {
         Orarend oRend = new Orarend(nap);
         
         for(int i=0; i<db; i++){
-            System.out.println(oRend.oratHozzaad(o[i]));
+            if(oRend.oratHozzaad(o[i]))
+                System.out.println("Sikeres hozzáadás!");
+            else
+                System.out.println("Nem sikerült a hozzáadás!");
         }
         
         //Teszt
-//        System.out.println(oRend.getNap());
-//        for(int i=0; i<oRend.getSzamlalo(); i++){
-//            System.out.println(oRend.getTomb()[i].toString());
-//        }
+        System.out.println(oRend.getNap());
+        for(int i=0; i<oRend.getSzamlalo(); i++){
+            System.out.println(oRend.getTomb()[i].toString());
+        }
         
         
     }

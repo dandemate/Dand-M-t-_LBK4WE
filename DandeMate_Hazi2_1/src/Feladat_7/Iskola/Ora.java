@@ -14,7 +14,7 @@ public class Ora {
         this.kód = kód;
         this.név = név;
         if(kezdet < 8) 
-            this.kezdet = 5;
+            this.kezdet = 8;
         else if(kezdet > 19) 
             this.kezdet = 19;
         else 
@@ -44,7 +44,7 @@ public class Ora {
 
     public void setKezdet(int kezdet) {
         if(kezdet < 8) 
-            this.kezdet = 5;
+            this.kezdet = 8;
         else if(kezdet > 19) 
             this.kezdet = 19;
         else 
