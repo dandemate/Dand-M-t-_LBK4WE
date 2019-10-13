@@ -16,7 +16,7 @@ public class Lándzsás extends Katona {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Lándzsás:"+super.toString();
     }
 
 }

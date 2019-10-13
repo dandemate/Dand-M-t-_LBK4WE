@@ -17,8 +17,14 @@ public class Nyilas extends Katona {
         this.lőtáv = lőtáv;
     }
 
+    @Override
+    public int getTámadó_erő() {
+        return super.getTámadó_erő()+getLőtáv();
+    }
+
+
     public int getLőtáv() {
-        return lőtáv+getTámadó_erő();
+        return lőtáv;
     }
 
     public void setLőtáv(int lőtáv) {
@@ -28,7 +34,7 @@ public class Nyilas extends Katona {
     @Override
     public String toString() {
         return "Nyilas:" +
-                "TE: " + getLőtáv() +
+                "TE: " + getTámadó_erő() +
                 ", VE: " + getVédő_erő();
     }
 
